@@ -59,3 +59,96 @@ video {
 // ---------------------------------------------
 // Votre code ici :
 // ---------------------------------------------
+
+.wrapper-hover div:hover {
+  background-color: var(--pink);
+}
+.wrapper-transition div {
+  transition: background 1s ease;
+}
+.wrapper-transition div:hover {
+  background-color: var(--pink);
+}
+.wrapper-delay div {
+  transition: background 1s 0.5s ease;
+}
+.wrapper-delay div:hover {
+  background-color: var(--pink);
+}
+
+.wrapper-two-properties div {
+  transition: all 1s ease;
+}
+.wrapper-two-properties div:hover {
+  background-color: var(--pink);
+  color: black;
+}
+.wrapper-delay-one-property div {
+  transition: background 1s ease, color 1s 0.5s ease;
+}
+.wrapper-delay-one-property div:hover {
+  background-color: var(--pink);
+  color: black;
+}
+.wrapper-parent div {
+  transition: all 1s ease;
+}
+.wrapper-parent:hover div {
+  background-color: var(--pink);
+}
+.wrapper-parent-delay div:nth-child(1) {
+  transition: all 1s ease;
+}
+.wrapper-parent-delay div:nth-child(2) {
+  transition: all 1s 0.5s ease;
+}
+.wrapper-parent-delay div:nth-child(3) {
+  transition: all 1s 1s ease;
+}
+.wrapper-parent-delay:hover div {
+  background-color: var(--pink);
+}
+.wrapper-parent-children {
+  transition: all 1s ease;
+  div {
+    transition: all 1s ease;
+  }
+}
+.wrapper-parent-children:hover {
+  background-color: var(--blue);
+  div {
+    background-color: var(--pink);
+  }
+}
+
+.wrapper-parent-children-delay {
+  transition: all 1s ease;
+  div {
+    transition: all 1s 1s ease;
+  }
+}
+.wrapper-parent-children-delay:hover {
+  background-color: var(--blue);
+  div {
+    background-color: var(--pink);
+  }
+}
+
+.wrapper-translate div {
+  transition: all 1s ease;
+}
+.wrapper-translate div:hover {
+  transform: translateY(50px);
+}
+.wrapper-rotate div {
+  transition: all 1s ease;
+}
+.wrapper-rotate div:hover {
+  transform: rotate(90deg);
+}
+.wrapper-scale div {
+  transition: all 1s ease;
+}
+.wrapper-scale div:hover {
+  transform: scale(1.2);
+}
